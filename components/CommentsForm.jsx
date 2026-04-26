@@ -56,7 +56,7 @@ const CommentsForm = ({ slug }) => {
 
     submitComment(commentObj)
       .then((res) => {
-        if (res.createComment) {
+        if (res && res.id) {
           if (!storeData) {
             formData.name = '';
             formData.email = '';
